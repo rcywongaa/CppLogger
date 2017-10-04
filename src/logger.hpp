@@ -29,5 +29,6 @@ class Logger
 
     private:
         static std::shared_ptr<spdlog::logger> instance;
+        const static std::string LOG_DIR;
         Logger() {};
 };
