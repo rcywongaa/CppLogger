@@ -1,3 +1,6 @@
 #include "meta.hpp"
 
-const std::string SRC_DIR = std::string(__FILE__).erase(std::string(__FILE__).rfind('/'));
+const std::string getSrcDir()
+{
+    return std::string(__FILE__).erase(std::string(__FILE__).rfind('/')) + "/";
+}

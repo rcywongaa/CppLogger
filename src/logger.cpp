@@ -1,7 +1,10 @@
 #include "logger.hpp"
 #include "meta.hpp"
 
-const std::string Logger::LOG_DIR = SRC_DIR + "../log/";
+const std::string Logger::getLogDir()
+{
+    return getSrcDir() + "../log/";
+}
 
 std::shared_ptr<spdlog::logger> Logger::instance = NULL;
 
@@ -15,7 +18,7 @@ void Logger::init_logging()
 
     auto stdout_sink = std::make_shared<spdlog::sinks::stdout_sink_st>();
     stdout_sink->set_level(spdlog::level::info);
-    auto file_sink = std::make_shared<spdlog::sinks::simple_file_sink_st>(LOG_DIR + "log.txt", true);
+    auto file_sink = std::make_shared<spdlog::sinks::simple_file_sink_st>(getLogDir() + "log.txt", true);
     file_sink->set_level(spdlog::level::trace);
 
     instance = std::make_shared<spdlog::logger>("template_logger", spdlog::sinks_init_list{stdout_sink, file_sink});

@@ -2,4 +2,4 @@
 
 #include <string>
 
-extern const std::string SRC_DIR;
+const std::string getSrcDir();
