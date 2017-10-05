@@ -39,5 +39,6 @@ void Logger::log(Severity severity, std::string source_filename, int line_number
     if (severity == INFO) instance->info(msg);
     if (severity == WARN) instance->warn(msg);
     if (severity == ERR) instance->error(msg);
+    instance->flush();
     return;
 }

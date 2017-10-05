@@ -8,5 +8,6 @@ int main(int argc, char** argv)
     LOG_INFO("info");
     LOG_DEBUG("debug");
     LOG_TRACE("trace");
+    sleep(10);
     return 0;
 }
