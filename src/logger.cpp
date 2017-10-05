@@ -22,7 +22,7 @@ void Logger::init_logging()
     file_sink->set_level(spdlog::level::trace);
 
     instance = std::make_shared<spdlog::logger>("template_logger", spdlog::sinks_init_list{stdout_sink, file_sink});
-    //instance->set_level(spdlog::level::trace);
+    instance->set_level(spdlog::level::trace);
     instance->set_pattern("[%x %X][%L]%v");
 }
 

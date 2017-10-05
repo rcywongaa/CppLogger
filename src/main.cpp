@@ -1,8 +1,12 @@
 #include "logger.hpp"
+#include <cstdlib>
 
 int main(int argc, char** argv)
 {
     Logger::init_logging();
-    LOG_INFO("test");
+    LOG_WARN("warn");
+    LOG_INFO("info");
+    LOG_DEBUG("debug");
+    LOG_TRACE("trace");
     return 0;
 }
