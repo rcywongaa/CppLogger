@@ -1,7 +1,6 @@
 set(PROJ_SRC
     main.cpp
     logger.cpp
-    meta.cpp
 )
 
 find_package (Threads)

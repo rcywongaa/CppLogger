@@ -2,4 +2,7 @@
 
 #include <string>
 
-const std::string getSrcDir();
+inline const std::string getSrcDir()
+{
+    return std::string(__FILE__).erase(std::string(__FILE__).rfind('/')) + "/";
+}
